@@ -5,11 +5,62 @@ bodyclass: homepage
 
 = partial "shared/header"
 
-
-.col-md-8.col-md-offset-3
+%nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+  %a.navbar-brand{:href => "#"} Navbar
+  %button.navbar-toggler{"aria-controls" => "navbarsExampleDefault", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarsExampleDefault", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarsExampleDefault.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{:href => "#"}
+          Home
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{:href => "#"} Link
+      %li.nav-item
+        %a.nav-link.disabled{:href => "#"} Disabled
+      %li.nav-item.dropdown
+        %a#dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"} Dropdown
+        .dropdown-menu{"aria-labelledby" => "dropdown01"}
+          %a.dropdown-item{:href => "#"} Action
+          %a.dropdown-item{:href => "#"} Another action
+          %a.dropdown-item{:href => "#"} Something else here
+    %form.form-inline.my-2.my-lg-0
+      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "text"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+/ Main jumbotron for a primary marketing message or call to action
+.jumbotron
+  .container
+    %h1.display-3 Hello, world!
+    %p This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+    %p
+      %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Learn more »
+.container
+  / Example row of columns
   .row
-    %h1 Hello World
-    %img{:src => "http://38.media.tumblr.com/5c4f88c458c8f0b412b266aaf44bc610/tumblr_mrh7chGs501qhub34o1_250.gif"}/
+    .col-md-4
+      %h2 Heading
+      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      %p
+        %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
+    .col-md-4
+      %h2 Heading
+      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      %p
+        %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
+    .col-md-4
+      %h2 Heading
+      %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      %p
+        %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
+  %hr/
+  %footer
+    %p © Company 2017
+/ /container
+
+
+
+
 
 
 = partial "shared/footer"
